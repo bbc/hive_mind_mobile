@@ -10,7 +10,7 @@ describe HiveMindMobile do
     }
 
     it 'creates an attribute instance' do
-      expect(HiveMindMobile.find_or_create_by(valid_options)).to be_an HiveMindMobile::Attribute
+      expect(HiveMindMobile.find_or_create_by(valid_options)).to be_an HiveMindMobile::Plugin
     end
   end
 end

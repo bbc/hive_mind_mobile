@@ -1,6 +1,6 @@
-class CreatePlugins < ActiveRecord::Migration
+class CreateHiveMindMobilePlugins < ActiveRecord::Migration
   def change
-    create_table :plugins do |t|
+    create_table :hive_mind_mobile_plugins do |t|
       t.integer :device_id
       t.string :imei
       t.string :serial
