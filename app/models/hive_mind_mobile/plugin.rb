@@ -3,12 +3,14 @@ module HiveMindMobile
 
     has_one :device, as: :plugin
 
+    attr_accessor :model
+
     def name
-      self.serial
+      self.model
     end
 
     def self.plugin_params params
-      params.permit(:imei, :serial)
+      params.permit(:imei, :model, :serial)
     end
   end
 end
