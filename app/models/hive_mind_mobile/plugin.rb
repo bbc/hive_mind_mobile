@@ -1,7 +1,10 @@
 module HiveMindMobile
   class Plugin < ActiveRecord::Base
 
+    has_attached_file :screenshot, default_url: "/images/:serial/:filename"
     has_one :device, as: :plugin
+
+    validates_attachment_content_type :screenshot, content_type: /\Aimage/
 
     attr_accessor :model
 
